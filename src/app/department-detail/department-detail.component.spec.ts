@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+
 
 import { DepartmentDetailComponent } from './department-detail.component';
+import { DepartmentService } from '../department.service';
+
 
 describe('DepartmentDetailComponent', () => {
   let component: DepartmentDetailComponent;
@@ -8,7 +12,8 @@ describe('DepartmentDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DepartmentDetailComponent ]
+      declarations: [ DepartmentDetailComponent ],
+      imports: [FormsModule]
     })
     .compileComponents();
   }));

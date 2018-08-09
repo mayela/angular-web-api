@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 
 import { DepartmentService } from '../department.service';
@@ -10,7 +10,7 @@ import { Department } from '../department';
   styleUrls: ['./departments.component.css']
 })
 export class DepartmentsComponent implements OnInit {
-  public newDepartment: Department = new Department();
+  @Input() newDepartment: Department = new Department();
   departments: Department[];
 
   constructor(private departmentService: DepartmentService) { }

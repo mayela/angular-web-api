@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
@@ -11,7 +11,7 @@ import { Department } from '../department';
   styleUrls: ['./department-detail.component.css']
 })
 export class DepartmentDetailComponent implements OnInit {
-  department: Department;
+  @Input() department: Department;
 
   constructor(
     private route: ActivatedRoute,
